@@ -1,9 +1,19 @@
-declare module '~/node_modules/nuxt/dist/pages/runtime/composables.d.ts' {
-  interface PageMeta {
-    pageLabel?: string
-    navOrder?: number
+/* eslint-disable @typescript-eslint/naming-convention */
+
+import 'vue-router'
+
+declare module 'vue-router' {
+  interface RouteMeta {
+    // todo: this is just an example. Please setup your own route meta params.
+    label?: string
+    requireAuth?: boolean
   }
 }
 
-// It is always important to ensure you import/export something when augmenting a type
-export {}
+// TODO: Here you define you global vue definitions. Uncomment if needed
+// declare module 'vue' {
+// interface ComponentCustomProperties {
+// }
+// }
+
+export { }
